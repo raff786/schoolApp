@@ -8,7 +8,7 @@ class SchoolAppApplicationTests {
 
 	@Test
 	void contextLoads() {
-		System.out.println("passed");
+		System.out.println("saj");
 	}
 
 }
