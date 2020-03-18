@@ -1,6 +1,10 @@
 package com.mastek.schoolApp.entities;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
@@ -14,6 +18,9 @@ public class Teacher {
 	Position position;
 	Salary salary;
 	
+	@Id
+	@Column(name="Teacher_Id")
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	public int getTeacherId() {
 		return teacherId;
 	}
