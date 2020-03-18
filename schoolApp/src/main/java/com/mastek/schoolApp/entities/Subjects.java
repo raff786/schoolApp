@@ -1,20 +1,34 @@
 package com.mastek.schoolApp.entities;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.ws.rs.FormParam;
 
 @Entity
 @Table(name="JPA_Subjects")
 public class Subjects {
 	int subjectId;
+	@FormParam("subjectName")
 	SubjectName subjectName;
+	
+	@FormParam("subjectAssessmentType")
 	SubjectAssessmentType subjectAssessmentType;
+	
+	@Id
+	@Column(name="Subject_Id")
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	public int getSubjectId() {
 		return subjectId;
 	}
 	public void setSubjectId(int subjectId) {
 		this.subjectId = subjectId;
 	}
+	
+	@Column(name="Subject_name",length=25,nullable=false)
 	public SubjectName getSubjectName() {
 		return subjectName;
 	}
