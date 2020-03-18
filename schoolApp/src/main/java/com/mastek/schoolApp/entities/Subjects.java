@@ -1,5 +1,10 @@
 package com.mastek.schoolApp.entities;
 
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="JPA_Subjects")
 public class Subjects {
 	int subjectId;
 	SubjectName subjectName;
