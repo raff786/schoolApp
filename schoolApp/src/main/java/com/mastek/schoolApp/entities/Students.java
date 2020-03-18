@@ -1,6 +1,10 @@
 package com.mastek.schoolApp.entities;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
@@ -17,6 +21,9 @@ public class Students {
 	boolean studentLearningDifficulty;
 	
 	
+	@Id // marking the property as primary key
+	@Column(name="Student_Id") //using column to provide the default column name
+	@GeneratedValue(strategy=GenerationType.AUTO)// auto numbering configuration as per DB
 	public int getStudentId() {
 		return studentId;
 	}

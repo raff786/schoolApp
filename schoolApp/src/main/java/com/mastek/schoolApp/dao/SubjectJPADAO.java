@@ -1,5 +1,8 @@
 package com.mastek.schoolApp.dao;
 
-public interface SubjectJPADAO {
+import org.springframework.data.repository.CrudRepository;
+
+
+public interface SubjectJPADAO{
 
 }
