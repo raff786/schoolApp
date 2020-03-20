@@ -2,6 +2,8 @@ package com.mastek.schoolApp.entities;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -29,12 +31,15 @@ public class Subjects {
 	}
 	
 	@Column(name="Subject_name",length=25,nullable=false)
+	@Enumerated(EnumType.STRING)
 	public SubjectName getSubjectName() {
 		return subjectName;
 	}
 	public void setSubjectName(SubjectName subjectName) {
 		this.subjectName = subjectName;
 	}
+	
+	@Enumerated(EnumType.STRING)
 	public SubjectAssessmentType getSubjectAssessmentType() {
 		return subjectAssessmentType;
 	}
@@ -67,6 +72,4 @@ public class Subjects {
 		return true;
 	}
 	
-	
-
 }

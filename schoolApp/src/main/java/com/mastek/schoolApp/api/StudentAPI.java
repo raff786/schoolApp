@@ -1,7 +1,10 @@
 package com.mastek.schoolApp.api;
 
+import java.util.Set;
+
 import javax.ws.rs.BeanParam;
 import javax.ws.rs.Consumes;
+import javax.ws.rs.FormParam;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
@@ -10,6 +13,8 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
 import com.mastek.schoolApp.entities.Students;
+import com.mastek.schoolApp.entities.Subjects;
+import com.mastek.schoolApp.entities.Teacher;
 
 @Path("/schoolapp/")
 public interface StudentAPI {
@@ -29,4 +34,30 @@ public interface StudentAPI {
 		@Consumes(MediaType.APPLICATION_FORM_URLENCODED)
 		@Produces(MediaType.APPLICATION_JSON)
 		public Students registerNewStudents(@BeanParam Students newStudents);
+		
+		@GET
+		@Path("/students/teacher/{studentId}")
+		@Produces({MediaType.APPLICATION_JSON})
+		public Set<Teacher> getStudentsTeachers(@PathParam("studentId") int studentId);
+		
+		@POST
+		@Path("/students/teacher/register")
+		@Consumes(MediaType.APPLICATION_FORM_URLENCODED)
+		@Produces(MediaType.APPLICATION_JSON)
+		public Teacher registerTeacherforStudents(
+				@FormParam("studentId") int studentId,
+				@BeanParam Teacher newTeacher);
+		
+		@GET
+		@Path("/students/subjects/{studentId}")
+		@Produces({MediaType.APPLICATION_JSON})
+		public Set<Subjects> getStudentsSubjects(@PathParam("studentId") int studentId);
+		
+		@POST
+		@Path("/students/subjects/register")
+		@Consumes(MediaType.APPLICATION_FORM_URLENCODED)
+		@Produces(MediaType.APPLICATION_JSON)
+		public Subjects registerSubjectsforStudents(
+				@FormParam("studentId") int studentId,
+				@BeanParam Subjects newSubjects);
 }

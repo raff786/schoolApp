@@ -11,8 +11,6 @@ import javax.ws.rs.core.MediaType;
 
 import com.mastek.schoolApp.entities.Subjects;
 
-
-
 @Path("/schoolapp/")
 public interface SubjectsAPI {
 	

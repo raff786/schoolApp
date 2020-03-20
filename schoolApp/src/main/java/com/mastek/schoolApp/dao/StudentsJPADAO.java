@@ -8,5 +8,5 @@ import com.mastek.schoolApp.entities.Students;
 @Repository
 public interface StudentsJPADAO extends
 				 CrudRepository<Students, Integer>{
-
+	
 }

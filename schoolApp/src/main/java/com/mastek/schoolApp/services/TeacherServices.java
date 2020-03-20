@@ -1,5 +1,9 @@
 package com.mastek.schoolApp.services;
 
+import java.util.Set;
+
+import javax.transaction.Transactional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
@@ -30,6 +34,19 @@ public class TeacherServices implements TeacherAPI{
 	public Teacher registerNewTeacher(Teacher newTeacher) {
 		newTeacher = teachDAO.save(newTeacher);
 		return newTeacher;
+	}
+
+	@Override
+	@Transactional
+	public Set<Teacher> getSubjectsTeachers(int subjectId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Teacher registerTeacherforSubjects(int subjectsId, Teacher newTeacher) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }
