@@ -513,6 +513,7 @@ class SchoolAppApplicationTests {
 //	
 //	@Test
 //	void testAssignStudentsToTeacher() {
+<<<<<<< HEAD
 //		Students stu = stuS.assignStudentsToTeacher(110,109);
 //		assertNotNull(stu.getTeacherAssigned(),"Teacher Not Assigned");
 //	}
@@ -787,4 +788,280 @@ class SchoolAppApplicationTests {
 ////		assertNotNull(tea.getCurrentSubjects(),"Subject Not Assigned");
 ////	}
 //	
+=======
+//		Students stu = stuS.assignStudentsToTeacher(544,559);
+//		assertNotNull(stu.getTeacherAssigned(),"Teacher Not Assigned");
+//	}
+//	
+//	@Test
+//	void testAssignStudentsToTeacher2() {
+//		Students stu = stuS.assignStudentsToTeacher(561,563);
+//		assertNotNull(stu.getTeacherAssigned(),"Teacher Not Assigned");
+//	}
+//	
+//	@Test
+//	void testAssignStudentsToTeacher3() {
+//		Students stu = stuS.assignStudentsToTeacher(561,559);
+//		assertNotNull(stu.getTeacherAssigned(),"Teacher Not Assigned");
+//	}
+//	
+//	@Test
+//	void testAssignStudentsToTeacher4() {
+//		Students stu = stuS.assignStudentsToTeacher(561,564);
+//		assertNotNull(stu.getTeacherAssigned(),"Teacher Not Assigned");
+//	}
+//	
+//	@Test
+//	void testAssignStudentsToTeacher5() {
+//		Students stu = stuS.assignStudentsToTeacher(544,563);
+//		assertNotNull(stu.getTeacherAssigned(),"Teacher Not Assigned");
+//	}
+//	
+//	@Test
+//	void testAssignStudentsToTeacher6() {
+//		Students stu = stuS.assignStudentsToTeacher(573,563);
+//		assertNotNull(stu.getTeacherAssigned(),"Teacher Not Assigned");
+//	}
+//	
+//	@Test
+//	void testAssignStudentsToTeacher7() {
+//		Students stu = stuS.assignStudentsToTeacher(576,565);
+//		assertNotNull(stu.getTeacherAssigned(),"Teacher Not Assigned");
+//	}
+//	
+//	@Test
+//	void testAssignStudentsToTeacher8() {
+//		Students stu = stuS.assignStudentsToTeacher(580,604);
+//		assertNotNull(stu.getTeacherAssigned(),"Teacher Not Assigned");
+//	}
+//	
+//	@Test
+//	void testAssignStudentsToTeacher9() {
+//		Students stu = stuS.assignStudentsToTeacher(610,604);
+//		assertNotNull(stu.getTeacherAssigned(),"Teacher Not Assigned");
+//	}
+//	
+//	@Test
+//	void testAssignStudentsToTeacher10() {
+//		Students stu = stuS.assignStudentsToTeacher(610,565);
+//		assertNotNull(stu.getTeacherAssigned(),"Teacher Not Assigned");
+//	}
+//	
+//	@Test
+//	void testAssignStudentsToTeacher11() {
+//		Students stu = stuS.assignStudentsToTeacher(610,569);
+//		assertNotNull(stu.getTeacherAssigned(),"Teacher Not Assigned");
+//	}
+//	
+//	@Test
+//	void testAssignStudentsToTeacher12() {
+//		Students stu = stuS.assignStudentsToTeacher(614,570);
+//		assertNotNull(stu.getTeacherAssigned(),"Teacher Not Assigned");
+//	}
+//	
+//	@Test
+//	void testAssignStudentsToSubjects() {
+//		Students stu = stuS.assignStudentsToSubjects(544,556);
+//		assertNotNull(stu.getSubjectsAssigned(),"Subject Not Assigned");
+//	}
+//	
+//	@Test
+//	void testAssignStudentsToSubjects2() {
+//		Students stu = stuS.assignStudentsToSubjects(544,581);
+//		assertNotNull(stu.getSubjectsAssigned(),"Subject Not Assigned");
+//	}
+//	
+//	@Test
+//	void testAssignStudentsToSubjects3() {
+//		Students stu = stuS.assignStudentsToSubjects(614,550);
+//		assertNotNull(stu.getSubjectsAssigned(),"Subject Not Assigned");
+//	}
+//	
+//	@Test
+//	void testAssignStudentsToSubjects4() {
+//		Students stu = stuS.assignStudentsToSubjects(610,581);
+//		assertNotNull(stu.getSubjectsAssigned(),"Subject Not Assigned");
+//	}
+//	
+//	@Test
+//	void testAssignStudentsToSubjects5() {
+//		Students stu = stuS.assignStudentsToSubjects(613,581);
+//		assertNotNull(stu.getSubjectsAssigned(),"Subject Not Assigned");
+//	}
+//	
+//	@Test
+//	void testAssignStudentsToSubjects6() {
+//		Students stu = stuS.assignStudentsToSubjects(612,581);
+//		assertNotNull(stu.getSubjectsAssigned(),"Subject Not Assigned");
+//	}
+//	
+//	@Test
+//	void testAssignStudentsToSubjects7() {
+//		Students stu = stuS.assignStudentsToSubjects(544,556);
+//		assertNotNull(stu.getSubjectsAssigned(),"Subject Not Assigned");
+//	}
+//	
+//	@Test
+//	void testAssignStudentsToSubjects8() {
+//		Students stu = stuS.assignStudentsToSubjects(613,592);
+//		assertNotNull(stu.getSubjectsAssigned(),"Subject Not Assigned");
+//	}
+//	
+//	@Test
+//	void testAssignStudentsToSubjects9() {
+//		Students stu = stuS.assignStudentsToSubjects(610,591);
+//		assertNotNull(stu.getSubjectsAssigned(),"Subject Not Assigned");
+//	}
+//	
+//	@Test
+//	void testAssignStudentsToSubjects10() {
+//		Students stu = stuS.assignStudentsToSubjects(607,581);
+//		assertNotNull(stu.getSubjectsAssigned(),"Subject Not Assigned");
+//	}
+//	
+//	@Test
+//	void testAssignTeacherToSubjects() {
+//		Teacher tea = teaS.assignTeacherToSubjects(557,545);
+//		assertNotNull(tea.getCurrentSubjects(),"Subject Not Assigned");
+//	}
+//	
+//	@Test
+//	void testAssignTeacherToSubjects2() {
+//		Teacher tea = teaS.assignTeacherToSubjects(558,545);
+//		assertNotNull(tea.getCurrentSubjects(),"Subject Not Assigned");
+//	}
+//	
+//	@Test
+//	void testAssignTeacherToSubjects3() {
+//		Teacher tea = teaS.assignTeacherToSubjects(559,545);
+//		assertNotNull(tea.getCurrentSubjects(),"Subject Not Assigned");
+//	}
+//	
+//	@Test
+//	void testAssignTeacherToSubjects4() {
+//		Teacher tea = teaS.assignTeacherToSubjects(563,546);
+//		assertNotNull(tea.getCurrentSubjects(),"Subject Not Assigned");
+//	}
+//	
+//	@Test
+//	void testAssignTeacherToSubjects5() {
+//		Teacher tea = teaS.assignTeacherToSubjects(564,546);
+//		assertNotNull(tea.getCurrentSubjects(),"Subject Not Assigned");
+//	}
+//	
+//	@Test
+//	void testAssignTeacherToSubjects6() {
+//		Teacher tea = teaS.assignTeacherToSubjects(565,546);
+//		assertNotNull(tea.getCurrentSubjects(),"Subject Not Assigned");
+//	}
+//	
+//	@Test
+//	void testAssignTeacherToSubjects7() {
+//		Teacher tea = teaS.assignTeacherToSubjects(566,546);
+//		assertNotNull(tea.getCurrentSubjects(),"Subject Not Assigned");
+//	}
+//	
+//	@Test
+//	void testAssignTeacherToSubjects8() {
+//		Teacher tea = teaS.assignTeacherToSubjects(567,546);
+//		assertNotNull(tea.getCurrentSubjects(),"Subject Not Assigned");
+//	}
+//	
+//	@Test
+//	void testAssignTeacherToSubjects9() {
+//		Teacher tea = teaS.assignTeacherToSubjects(568,546);
+//		assertNotNull(tea.getCurrentSubjects(),"Subject Not Assigned");
+//	}
+//	
+//	@Test
+//	void testAssignTeacherToSubjects10() {
+//		Teacher tea = teaS.assignTeacherToSubjects(569,546);
+//		assertNotNull(tea.getCurrentSubjects(),"Subject Not Assigned");
+//	}
+//	
+//	@Test
+//	void testAssignTeacherToSubjects11() {
+//		Teacher tea = teaS.assignTeacherToSubjects(570,546);
+//		assertNotNull(tea.getCurrentSubjects(),"Subject Not Assigned");
+//	}
+//	
+//	@Test
+//	void testAssignTeacherToSubjects12() {
+//		Teacher tea = teaS.assignTeacherToSubjects(579,547);
+//		assertNotNull(tea.getCurrentSubjects(),"Subject Not Assigned");
+//	}
+//	
+//	@Test
+//	void testAssignTeacherToSubjects13() {
+//		Teacher tea = teaS.assignTeacherToSubjects(593,548);
+//		assertNotNull(tea.getCurrentSubjects(),"Subject Not Assigned");
+//	}
+//	
+//	@Test
+//	void testAssignTeacherToSubjects14() {
+//		Teacher tea = teaS.assignTeacherToSubjects(594,548);
+//		assertNotNull(tea.getCurrentSubjects(),"Subject Not Assigned");
+//	}
+//	
+//	@Test
+//	void testAssignTeacherToSubjects15() {
+//		Teacher tea = teaS.assignTeacherToSubjects(595,548);
+//		assertNotNull(tea.getCurrentSubjects(),"Subject Not Assigned");
+//	}
+//	
+//	@Test
+//	void testAssignTeacherToSubjects16() {
+//		Teacher tea = teaS.assignTeacherToSubjects(599,549);
+//		assertNotNull(tea.getCurrentSubjects(),"Subject Not Assigned");
+//	}
+//	
+//	@Test
+//	void testAssignTeacherToSubjects17() {
+//		Teacher tea = teaS.assignTeacherToSubjects(600,549);
+//		assertNotNull(tea.getCurrentSubjects(),"Subject Not Assigned");
+//	}
+//	
+//	@Test
+//	void testAssignTeacherToSubjects18() {
+//		Teacher tea = teaS.assignTeacherToSubjects(601,549);
+//		assertNotNull(tea.getCurrentSubjects(),"Subject Not Assigned");
+//	}
+//	
+//	@Test
+//	void testAssignTeacherToSubjects19() {
+//		Teacher tea = teaS.assignTeacherToSubjects(601,550);
+//		assertNotNull(tea.getCurrentSubjects(),"Subject Not Assigned");
+//	}
+//	
+//	@Test
+//	void testAssignTeacherToSubjects20() {
+//		Teacher tea = teaS.assignTeacherToSubjects(602,551);
+//		assertNotNull(tea.getCurrentSubjects(),"Subject Not Assigned");
+//	}
+//	
+//	@Test
+//	void testAssignTeacherToSubjects21() {
+//		Teacher tea = teaS.assignTeacherToSubjects(603,552);
+//		assertNotNull(tea.getCurrentSubjects(),"Subject Not Assigned");
+//	}
+//	
+//	@Test
+//	void testAssignTeacherToSubjects22() {
+//		Teacher tea = teaS.assignTeacherToSubjects(604,553);
+//		assertNotNull(tea.getCurrentSubjects(),"Subject Not Assigned");
+//	}
+//	
+//	@Test
+//	void testAssignTeacherToSubjects23() {
+//		Teacher tea = teaS.assignTeacherToSubjects(605,554);
+//		assertNotNull(tea.getCurrentSubjects(),"Subject Not Assigned");
+//	}
+//	
+//	@Test
+//	void testAssignTeacherToSubjects24() {
+//		Teacher tea = teaS.assignTeacherToSubjects(606,555);
+//		assertNotNull(tea.getCurrentSubjects(),"Subject Not Assigned");
+//	}
+	
+
 }
