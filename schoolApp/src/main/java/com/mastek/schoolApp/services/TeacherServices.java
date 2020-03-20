@@ -1,7 +1,5 @@
 package com.mastek.schoolApp.services;
 
-import java.util.Set;
-
 import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,7 +7,9 @@ import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 import com.mastek.schoolApp.api.TeacherAPI;
+import com.mastek.schoolApp.dao.SubjectJPADAO;
 import com.mastek.schoolApp.dao.TeacherJPADAO;
+import com.mastek.schoolApp.entities.Subjects;
 import com.mastek.schoolApp.entities.Teacher;
 
 @Component // marking the class as bean to be created.
@@ -18,6 +18,9 @@ public class TeacherServices implements TeacherAPI{
 	
 	@Autowired
 	TeacherJPADAO teachDAO;
+	
+	@Autowired
+	SubjectJPADAO subDAO;
 
 	@Override
 	public Iterable<Teacher> listAllTeacher() {
@@ -35,18 +38,19 @@ public class TeacherServices implements TeacherAPI{
 		newTeacher = teachDAO.save(newTeacher);
 		return newTeacher;
 	}
-
-	@Override
+	
 	@Transactional
-	public Set<Teacher> getSubjectsTeachers(int subjectId) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public Teacher registerTeacherforSubjects(int subjectsId, Teacher newTeacher) {
-		// TODO Auto-generated method stub
-		return null;
+	public Teacher assignTeacherToSubjects(int teachId, int subId) {
+		Teacher tea = teachDAO.findById(teachId).get();
+		Subjects sub = subDAO.findById(subId).get();
+		
+		tea.setCurrentSubjects(sub);
+		sub.getTeacher().add(tea);
+		
+		teachDAO.save(tea);
+		subDAO.save(sub);
+		
+		return tea;
 	}
 
 }

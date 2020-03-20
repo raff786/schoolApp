@@ -1,7 +1,10 @@
 package com.mastek.schoolApp.api;
 
+import java.util.Set;
+
 import javax.ws.rs.BeanParam;
 import javax.ws.rs.Consumes;
+import javax.ws.rs.FormParam;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
@@ -10,6 +13,7 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
 import com.mastek.schoolApp.entities.Subjects;
+import com.mastek.schoolApp.entities.Teacher;
 
 @Path("/schoolapp/")
 public interface SubjectsAPI {
@@ -29,5 +33,18 @@ public interface SubjectsAPI {
 	@Consumes(MediaType.APPLICATION_FORM_URLENCODED)
 	@Produces(MediaType.APPLICATION_JSON)
 	public Subjects registerNewSubjects(@BeanParam Subjects newSubjects);
+	
+	@GET
+	@Path("/subjects/teacher/{subjectId}")
+	@Produces({MediaType.APPLICATION_JSON})
+	public Set<Teacher> getSubjectsTeachers(@PathParam("subjectId") int subjectId);
+	
+	@POST
+	@Path("/subjects/teacher/register")
+	@Consumes(MediaType.APPLICATION_FORM_URLENCODED)
+	@Produces(MediaType.APPLICATION_JSON)
+	public Teacher registerTeacherforSubjects(
+			@FormParam("subjectId") int subjectId,
+			@BeanParam Teacher newTeacher);
 
 }

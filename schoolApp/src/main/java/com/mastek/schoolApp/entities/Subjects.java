@@ -1,5 +1,9 @@
 package com.mastek.schoolApp.entities;
 
+import java.util.HashSet;
+import java.util.Set;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
@@ -7,8 +11,10 @@ import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.ws.rs.FormParam;
+import javax.xml.bind.annotation.XmlTransient;
 
 @Entity
 @Table(name="JPA_Subjects")
@@ -20,12 +26,24 @@ public class Subjects {
 	@FormParam("subjectAssessmentType")
 	SubjectAssessmentType subjectAssessmentType;
 	
+	Set<Teacher> teacher = new HashSet<>();
+	
+	@OneToMany(mappedBy="currentSubjects", cascade=CascadeType.ALL)
+	@XmlTransient
+	public Set<Teacher> getTeacher() {
+		return teacher;
+	}
+	public void setTeacher(Set<Teacher> teacher) {
+		this.teacher = teacher;
+	}
+	
 	@Id
 	@Column(name="Subject_Id")
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	public int getSubjectId() {
 		return subjectId;
 	}
+	
 	public void setSubjectId(int subjectId) {
 		this.subjectId = subjectId;
 	}

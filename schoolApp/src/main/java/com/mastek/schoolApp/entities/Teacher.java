@@ -38,6 +38,7 @@ public class Teacher {
 	@FormParam("salary")
 	Salary salary;
 	
+	@FormParam("currentSubjects")
 	Subjects currentSubjects;
 	
 	@ManyToOne
@@ -50,6 +51,10 @@ public class Teacher {
 	
 	public void setCurrentSubjects(Subjects currentSubjects) {
 		this.currentSubjects = currentSubjects;
+	}
+	
+	public Teacher() {
+		// TODO Auto-generated constructor stub.
 	}
 	
 	@Id

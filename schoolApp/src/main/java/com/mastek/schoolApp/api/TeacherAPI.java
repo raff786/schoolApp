@@ -34,17 +34,4 @@ public interface TeacherAPI {
 		@Produces(MediaType.APPLICATION_JSON)
 		public Teacher registerNewTeacher(@BeanParam Teacher newTeacher);
 		
-		@GET
-		@Path("/subjects/teacher/{teacherId}")
-		@Produces({MediaType.APPLICATION_JSON})
-		public Set<Teacher> getSubjectsTeachers(@PathParam("subjectId") int subjectId);
-		
-		@POST
-		@Path("/subjects/teacher/register")
-		@Consumes(MediaType.APPLICATION_FORM_URLENCODED)
-		@Produces(MediaType.APPLICATION_JSON)
-		public Teacher registerTeacherforSubjects(
-				@FormParam("subjectsId") int subjectsId,
-				@BeanParam Teacher newTeacher);
-		
 }
