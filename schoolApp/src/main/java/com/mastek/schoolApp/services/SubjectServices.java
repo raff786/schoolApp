@@ -50,7 +50,7 @@ public class SubjectServices implements SubjectsAPI{
 		sub = subjectDAO.save(sub);
 		return sub;
 	}
-//lol
+
 	@Override
 	@Transactional
 	public Set<Teacher> getSubjectsTeachers(int subjectId) {
