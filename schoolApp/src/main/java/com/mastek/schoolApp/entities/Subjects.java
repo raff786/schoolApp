@@ -22,7 +22,7 @@ public class Subjects {
 	int subjectId;
 	@FormParam("subjectName")
 	SubjectName subjectName;
-	
+	//test
 	@FormParam("subjectAssessmentType")
 	SubjectAssessmentType subjectAssessmentType;
 	
